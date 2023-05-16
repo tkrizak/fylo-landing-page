@@ -132,7 +132,6 @@ select {
 .flex-columns {
   display: flex;
   align-items: center;
-
   flex-wrap: wrap;
   gap: 100px;
   padding: 100px 0;
@@ -234,13 +233,28 @@ button {
   flex-direction: column;
 }
 
+.flex-columns-email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding: 100px 0;
+}
+
 .flex-email-column {
+  flex: 1;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
+  max-width: 450px;
 }
 
 .bottom-input {
   padding: 9px 10px;
+}
+
+.bottom-button {
+  align-self: flex-start;
 }
