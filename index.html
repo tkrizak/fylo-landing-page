@@ -58,7 +58,12 @@
                   type="email"
                   placeholder="Enter your email..."
                 />
-                <button class="button f-clr-5 fs-1">Get Started</button>
+                <button class="button f-clr-5 fs-1">
+                  Get Started
+                  <p class="wrong-email-top fw-400 f-clr-6">
+                    Please check your email
+                  </p>
+                </button>
               </div>
             </div>
           </div>
@@ -88,6 +93,11 @@
                 <span class="green-link f-clr-3"
                   >See how Fylo works
                   <img class="arrow" src="./images/icon-arrow.svg" alt="" />
+                  <img
+                    class="arrow-hover"
+                    src="./images/icon-arrow-hover.svg"
+                    alt=""
+                  />
                 </span>
               </a>
             </div>
@@ -132,7 +142,11 @@
               type="email"
               placeholder="email@example.com"
             />
-            <button class="button f-clr-5 fs-1">Get Started for free</button>
+
+            <button class="button f-clr-5 fs-1 fw-700">
+              Get Started for free
+              <p class="wrong-email fw-400">Please check your email</p>
+            </button>
           </div>
         </div>
       </div>
@@ -144,8 +158,14 @@
           <a href="#"><img src="./images/logo-white.svg" alt="" /></a>
           <div class="flex-footer">
             <div class="footer-rows">
-              <p>Phone: +1-543-123-4567</p>
-              <p>example@fylo.com</p>
+              <div class="flex gap-10">
+                <img src="./images/icon-phone.svg" alt="" />
+                <p>Phone: +1-543-123-4567</p>
+              </div>
+              <div class="flex gap-10">
+                <img src="./images/icon-email.svg" alt="" />
+                <p>example@fylo.com</p>
+              </div>
             </div>
             <nav>
               <ul class="footer-rows">
