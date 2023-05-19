@@ -298,7 +298,13 @@ input:focus-visible {
 }
 
 .flex-email-column .button {
-  align-self: flex-start;
+  flex: 1;
+}
+
+@media (min-width: 371px) {
+  .flex-email-column .button {
+    align-self: flex-start;
+  }
 }
 
 .wrong-email {
