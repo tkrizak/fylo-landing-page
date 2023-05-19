@@ -38,6 +38,10 @@ select {
   font: inherit;
 }
 
+input {
+  padding: 9px 16px;
+}
+
 .f-clr-1 {
   color: hsl(243, 87%, 12%);
 }
@@ -67,7 +71,7 @@ select {
 }
 
 .fs-h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .fs-h2 {
@@ -125,16 +129,35 @@ select {
   gap: 50px;
 }
 
+@media (max-width: 375px) {
+  .flex-nav {
+    gap: 20px;
+  }
+}
+
 .flex-nav a {
   text-decoration: none;
   color: hsl(238, 22%, 44%);
+}
+.flex-nav a:hover {
+  color: hsl(238, 22%, 80%);
 }
 
 .flex-columns {
   display: flex;
   align-items: center;
+  gap: 50px;
   flex-wrap: wrap;
-  gap: 100px;
+}
+
+@media (max-width: 375px) {
+  .flex-columns {
+    flex-direction: column-reverse;
+  }
+}
+
+.flex-columns > * {
+  flex: 1;
 }
 
 .flex-rows-text {
@@ -152,8 +175,6 @@ select {
 
 .top-input {
   flex: 1;
-  padding: 9px 10px;
-  max-width: 350px;
 }
 
 ::placeholder {
@@ -174,17 +195,11 @@ select {
   background-color: hsl(224, 99%, 73%);
 }
 
-.illustration {
-  flex: 1;
-  width: 500px;
-}
-
-.flex-rows-text-wrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 600px;
-  padding: 30px 0;
 }
 
 .green-link {
@@ -204,7 +219,7 @@ select {
 }
 
 .green-link:hover {
-  color: red;
+  color: hsl(170, 45%, 60%);
 }
 
 .quote-container {
@@ -254,16 +269,13 @@ select {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  max-width: 500px;
   gap: 20px;
-  max-width: 450px;
 }
 
-.bottom-input {
-  padding: 9px 10px;
-}
-
-.bottom-button {
+.flex-email-column .button {
   align-self: flex-start;
+  padding: 12px 30px;
 }
 
 .flex {
@@ -278,12 +290,25 @@ select {
 
 .flex-footer {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 50px;
   padding-top: 2rem;
   max-width: 1400px;
+}
+
+@media (max-width: 375px) {
+  .flex-footer {
+    flex-direction: column;
+  }
+  .footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    flex: 1;
+  }
 }
 
 .footer-nav {
@@ -299,6 +324,29 @@ select {
   border: 2px solid rgb(255, 255, 255);
   border-radius: 50%;
   padding: 0.3rem;
+  z-index: 2;
+  position: relative;
+}
+.social-icons:hover {
+  z-index: 1;
+}
+
+.social-icons-hover {
+  height: 35px;
+  width: 35px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 0.3rem;
+  opacity: 1;
+  transition: opacity;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.social-icons-hover:hover {
+  z-index: 2;
+  opacity: 100%;
 }
 
 .footer-container {
@@ -323,8 +371,9 @@ select {
 .footer-icons {
   display: flex;
   gap: 1rem;
+  position: relative;
 }
 
 .block-padding {
-  padding-block: 100px;
+  padding-block: 80px;
 }
